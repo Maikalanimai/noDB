@@ -19,10 +19,10 @@ let id = 2;
 
 module.exports = {
   getValueSold: (req, res) => {
-    res.status(200).send({ valueSold });
+    res.status(200).send( valueSold );
   },
   getIngredients: (req, res) => {
-    res.status(200).send({ ingredients });
+    res.status(200).send( ingredients);
   },
   addIngredient: (req, res) => {
     const { name, value, quantity } = req.body;

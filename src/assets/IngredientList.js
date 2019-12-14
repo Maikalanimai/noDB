@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 export default class IngredientList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      ingIndex: 0,
+      ingName: "",
       ingredients: [
         "7-Yottabyte Storage Component",
         "Acidic Remains",
@@ -560,18 +560,18 @@ export default class IngredientList extends Component {
   }
 
   handleChange = e => {
-    this.setState({ ingIndex: e.target.value }, () =>
-      console.log(this.state.ingIndex)
+    this.setState({ ingName: e.target.value }
     );
   };
 
+  
   render() {
     return (
       <div>
         IngredientList.js
         <select onChange={e => this.handleChange(e)} name="ingredients">
           {this.state.ingredients.map((e, i) => (
-            <option value={i}>{e}</option>
+            <option key={i}>{e}</option>
           ))}
         </select>
       </div>
