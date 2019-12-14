@@ -11,11 +11,16 @@ class InputForm extends Component{
         }
     }
 
+    
     render() {
         return(
             <div>
-                Test
-                {console.log(this.state.ingredientList)}
+                InputForm.js
+                
+                <IngredientList/>
+                <input placeholder="Quantity"/>
+                <input placeholder="Value in emeralds"/>
+                <button>Add to My Ingredients</button>
             </div>
         )
     }

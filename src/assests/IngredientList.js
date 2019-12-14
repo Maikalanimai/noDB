@@ -4,6 +4,7 @@ export default class IngredientList extends Component {
   constructor() {
     super();
     this.state = {
+      ingIndex: 0,
       ingredients: [
         "7-Yottabyte Storage Component",
         "Acidic Remains",
@@ -553,11 +554,27 @@ export default class IngredientList extends Component {
         "Zhight Herbal Mix",
         "Zhight Shiny Stone",
         "Zhight Weird Magic Rock",
-        "Zombie Eye",
-        "Enraged Soul",
-        "Corroded Chunk",
-        "Enhanced Potential Microchip"
+        "Zombie Eye"
       ]
     };
+  }
+
+  handleChange = e => {
+    this.setState({ ingIndex: e.target.value }, () =>
+      console.log(this.state.ingIndex)
+    );
+  };
+
+  render() {
+    return (
+      <div>
+        IngredientList.js
+        <select onChange={e => this.handleChange(e)} name="ingredients">
+          {this.state.ingredients.map((e, i) => (
+            <option value={i}>{e}</option>
+          ))}
+        </select>
+      </div>
+    );
   }
 }

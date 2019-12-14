@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import InputForm from './assests/InputForm'
-// import Header from `./assests/Header`
+import Header from "./assests/Header"
 
 class App extends React.Component {
   constructor() {
@@ -12,6 +12,7 @@ class App extends React.Component {
   }
   render() {
     return <div className="App">
+      <Header/>
       <InputForm/>
     </div>;
   }
