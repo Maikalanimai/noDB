@@ -34,13 +34,9 @@ module.exports = {
     res.status(201).send({ingredients, valueSold});
   },
   changeQuantity: (req, res) => {
-    const { add } = req.query.add;
+    const { add } = req.query;
     const index = ingredients.findIndex(ing => ing.id === +req.params.id);
-
-    add === true
-      ? ingredients[index].quantity++
-      : ingredients[index].quantity--;
-
+    add === 'true' ? ingredients[index].quantity++ : ingredients[index].quantity--
     res.status(200).send({ingredients, valueSold});
   },
     sellIngredient: (req, res) => {
