@@ -1,3 +1,4 @@
+// *Complete
 import React, {Component} from 'react'
 import Axios from 'axios'
 
@@ -19,10 +20,10 @@ export default class Header extends Component {
     
     render () {
         return(
-            <div>
+            <header>
                 <h1>Wynncraft Item Counter</h1>
                 Emeralds From selling Ingredients: {this.state.valueSold}
-            </div>
+            </header>
         )
     }
 }

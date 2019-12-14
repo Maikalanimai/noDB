@@ -1,3 +1,4 @@
+// ! need to pass values from input form into here then send to server
 import React, { Component } from "react";
 
 export default class IngredientList extends Component {

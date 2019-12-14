@@ -42,12 +42,12 @@ module.exports = {
     add === "true"
       ? ingredients[index].quantity++
       : ingredients[index].quantity--;
-    res.status(200).send({ ingredients, valueSold });
+    res.status(200).send( ingredients );
   },
   sellIngredient: (req, res) => {
     const index = ingredients.findIndex(ing => ing.id === +req.params.id);
-    valueSold =
-      valueSold + ingredients[index].value * ingredients[index].quantity;
+    valueSold[0] =
+      valueSold[0] + (ingredients[index].value * ingredients[index].quantity);
     ingredients.splice(index, 1);
     res.status(200).send({ ingredients, valueSold });
   }

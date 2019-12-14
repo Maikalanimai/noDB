@@ -17,18 +17,31 @@ class IngredientAcquisition extends Component {
     );
   }
 
+  subtract(id) {
+    axios.put(`/api/ingredients/${id}?add=false`).then(res =>
+        this.setState({
+            list: res.data
+        }))
+  }
 
+  add(id) {
+      axios.put(`/api/ingredients/${id}?add=true`).then(res =>
+        this.setState({
+            list: res.data
+        }))
+  }
+  
   render() {
     return (
       <div>
         IngredientAcquisition
-        {this.state.list.map((e, i) => (
-        <div className={e.name} key={i}>
+        {this.state.list.map((e) => (
+        <div className={e.name} key={e.id}>
           <h3>{e.name}</h3>
           <div>{e.value}</div>
-          <button className='subtract'>-</button>
+          <button className='subtract' onClick={() => this.subtract(e.id)}>-</button>
           <div>{e.quantity}</div>
-          <button className='add'>+</button>
+          <button className='add' onClick={()=>this.add(e.id)}>+</button>
           <button className='sell'>Sell</button>
         </div>
       ))}
