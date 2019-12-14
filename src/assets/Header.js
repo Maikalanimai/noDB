@@ -1,22 +1,27 @@
 import React, {Component} from 'react'
-// import Axios from 'axios'
+import Axios from 'axios'
 
 export default class Header extends Component {
     constructor() {
         super()
         this.state = {
-            valueSold: []
+            valueSold: null
         }
     }
 
-    
+    componentDidMount() {
+        Axios.get('/api/valueSold').then((res)=>
+        this.setState({
+            valueSold: res.data[0]
+        })
+        )
+    }
     
     render () {
-        console.log(this.state.valueSold)
         return(
             <div>
-                Header.js
-                {this.state.valueSold}
+                <h1>Wynncraft Item Counter</h1>
+                Emeralds From selling Ingredients: {this.state.valueSold}
             </div>
         )
     }

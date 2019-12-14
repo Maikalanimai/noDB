@@ -13,13 +13,13 @@ const ingredients = [
   }
 ];
 
-let valueSold = 0;
+const valueSold = [0];
 
 let id = 2;
 
 module.exports = {
   getValueSold: (req, res) => {
-    res.status(200).send( valueSold );
+    res.status(200).send(valueSold);
   },
   getIngredients: (req, res) => {
     res.status(200).send( ingredients);

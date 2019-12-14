@@ -5,23 +5,12 @@ class IngredientAcquisition extends Component {
   constructor() {
     super();
     this.state = {
-      list: [{
-        id: 0,
-        name: "Pigman flesh",
-        value: 2,
-        quantity: 3
-      },
-      {
-        id: 1,
-        name: "Golden Avia Feather",
-        value: 160,
-        quantity: 24
-      }]
+      list: []
     };
   }
 
   componentDidMount() {
-    axios.get("http://localhost:4000/api/ingredients").then(res =>
+    axios.get("/api/ingredients").then(res =>
       this.setState({
         list: res.data
       })
@@ -33,11 +22,14 @@ class IngredientAcquisition extends Component {
     return (
       <div>
         IngredientAcquisition
-        {this.state.list.map(e => (
-        <div className={e.name}>
+        {this.state.list.map((e, i) => (
+        <div className={e.name} key={i}>
           <h3>{e.name}</h3>
           <div>{e.value}</div>
+          <button className='subtract'>-</button>
           <div>{e.quantity}</div>
+          <button className='add'>+</button>
+          <button className='sell'>Sell</button>
         </div>
       ))}
       </div>
