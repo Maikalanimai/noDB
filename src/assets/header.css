@@ -1,0 +1,37 @@
+header {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    height: 25%;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    margin: 0px;
+    padding-top: 5vh;
+    font-size: 3rem;
+    padding-left: 1rem
+}
+
+h2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+.sold {
+    display: flex;
+    align-content: center;
+    margin-top: 5%;
+}
+p {
+    border: black solid 5px ;
+    height: 2rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    background-image: url('./images/bg.png');
+    color: white;
+    margin-left: 40% ;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import IngredientList from "./IngredientList";
+import './inputForm.css'
 
 class InputForm extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class InputForm extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <IngredientList />
         <input
           onChange={e => this.handleChange(e, "quantity")}
@@ -31,9 +32,9 @@ class InputForm extends Component {
           placeholder="Value in emeralds"
           type="number"
         />
-        <button>Add to My Ingredients</button>
+        <button className='push'>Add to My Ingredients</button>
         
-      </div>
+      </main>
     );
   }
 }

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Wynn Item Counter",
+  "name": "Wynncraft Ingredient tracker",
   "icons": [
     {
       "src": "favicon.ico",

@@ -48,7 +48,8 @@ module.exports = {
     const index = ingredients.findIndex(ing => ing.id === +req.params.id);
     valueSold[0] =
       valueSold[0] + (ingredients[index].value * ingredients[index].quantity);
+      console.log(valueSold[0])
     ingredients.splice(index, 1);
-    res.status(200).send({ ingredients, valueSold });
+    res.status(200).send( ingredients);
   }
 };

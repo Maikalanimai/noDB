@@ -569,7 +569,6 @@ export default class IngredientList extends Component {
   render() {
     return (
       <div>
-        IngredientList.js
         <select onChange={e => this.handleChange(e)} name="ingredients">
           {this.state.ingredients.map((e, i) => (
             <option key={i}>{e}</option>

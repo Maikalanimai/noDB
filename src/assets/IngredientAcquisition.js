@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class IngredientAcquisition extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       list: []
     };
@@ -30,11 +30,17 @@ class IngredientAcquisition extends Component {
             list: res.data
         }))
   }
-  
+
+  sell(id) {
+      axios.delete(`/api/ingredients/${id}`).then(res =>
+        this.setState({
+            list: res.data
+        }))
+  }
+
   render() {
     return (
       <div>
-        IngredientAcquisition
         {this.state.list.map((e) => (
         <div className={e.name} key={e.id}>
           <h3>{e.name}</h3>
@@ -42,7 +48,7 @@ class IngredientAcquisition extends Component {
           <button className='subtract' onClick={() => this.subtract(e.id)}>-</button>
           <div>{e.quantity}</div>
           <button className='add' onClick={()=>this.add(e.id)}>+</button>
-          <button className='sell'>Sell</button>
+          <button className='sell' onClick={() => this.sell(e.id)}>Sell</button>
         </div>
       ))}
       </div>

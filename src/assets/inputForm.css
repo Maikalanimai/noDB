@@ -1,0 +1,24 @@
+main {
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 6fr;
+    padding-left: 10px;
+}
+
+input {
+    height: 2rem;
+    width: 12rem;
+    border: skyblue solid 5px;
+    display: grid;
+    align-items: center;
+    margin-left: 10%;
+    border-radius: 15%;
+    font-size: 1.25rem;
+}
+
+.push {
+    height: 4rem;
+    width: 12rem;
+    border: skyblue solid 7px;
+    font-size: 1.2rem;
+    margin-left: 10%
+}
