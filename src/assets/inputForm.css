@@ -1,6 +1,7 @@
 main {
+    position: sticky;
     display: inline-grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 6fr;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
     padding-left: 10px;
     align-items: center;
 }
