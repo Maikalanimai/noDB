@@ -12,7 +12,7 @@ export default class Header extends Component {
         <h1>Wynncraft Ingredient Tracker</h1>
         <h2>
           <div className="sold">Emeralds from selling ingredients:</div>
-          <p>{this.props.valueSold}</p>
+          <p> {this.props.valueSold}</p>
         </h2>
       </header>
     );

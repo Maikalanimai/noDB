@@ -6,6 +6,8 @@ main {
     align-items: center;
 }
 
+
+
 input {
     height: 2rem;
     width: 12rem;
@@ -15,14 +17,22 @@ input {
     margin-left: 10%;
     border-radius: 15%;
     font-size: 1.25rem;
+    background-color: #67d551;
+}
+
+.quant {
+    border: solid 5px hsl(180, 58%, 51%);
+    background-color: #46ffff;
 }
  
 
 .push {
     height: 4rem;
     width: 12rem;
-    border: green solid 7px;
+    border: #72015d solid 7px;
     font-size: 1.2rem;
     margin-left: 10%;
     border-radius: 20%;
+    background-color: #aa008c;
+    color: white;
 }

@@ -27,11 +27,13 @@ class InputForm extends Component {
       <main>
         <IngredientList handleChange={this.handleChange} />
         <input
+        className='quant'
           onChange={e => this.handleChange(e, "quantity")}
           placeholder="Quantity"
           type="number"
         />
         <input
+        className = 'input'
           onChange={e => this.handleChange(e, "value")}
           placeholder="Value in emeralds"
           type="number"

@@ -571,7 +571,7 @@ export default class IngredientList extends Component {
   
   render() {
     return (
-      <div>
+      <div className='dropdown'>
         <select onChange={e => this.props.handleChange(e, "name")} name="ingredients">
           {this.state.ingredients.map((e, i) => (
             <option key={i}>{e}</option>

@@ -3,7 +3,7 @@
   z-index: -1;
   display: grid;
   grid-template-columns: 1fr 1fr 6fr;
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 48px;
 }
 
@@ -22,14 +22,14 @@ hr {
 }
 #ingredient_obj {
   width: 150px;
-  border: solid rgb(115, 218, 231) 5px;
+  border: solid #2c0860 5px;
   margin: 2%;
   border-radius: 15%;
   display: grid;
   grid-template-rows: 1fr, 1fr, 2fr;
   grid-row-gap: 0.5rem;
   justify-items: center;
-  
+  background-color: #110110;
 
 }
 .Gold {
