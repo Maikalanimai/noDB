@@ -58,7 +58,7 @@ class IngredientAcquisition extends Component {
       .post("/api/ingredients", {
         name: name,
         value: value,
-        quantity: quantity
+        quantity: Math.abs(quantity)
       })
       .then(res =>
         this.setState({

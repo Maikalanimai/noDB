@@ -30,7 +30,7 @@ module.exports = {
     const index = ingredients.findIndex(ing => ing.id === +req.params.id);
     add === "true"
       ? ingredients[index].quantity++
-      : ingredients[index].quantity !== 0 
+      : ingredients[index].quantity > 0 
       ?ingredients[index].quantity--
       : console.log('unable to perform action requested. subtract from zero atempted');
     res.status(200).send( ingredients );
