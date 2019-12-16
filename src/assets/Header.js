@@ -4,10 +4,6 @@ import "./header.css";
 
 export default class Header extends Component {
 
-  
-  componentDidMount() {
-    this.props.updateValue();
-  }
 
   render() {
     return (
