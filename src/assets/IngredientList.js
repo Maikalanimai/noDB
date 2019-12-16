@@ -1,6 +1,7 @@
 // ! need to pass values from input form into here then send to server
 import React, { Component } from "react";
 
+
 export default class IngredientList extends Component {
   constructor(props) {
     super(props);
@@ -560,6 +561,8 @@ export default class IngredientList extends Component {
     };
   }
 
+
+
   handleChange = e => {
     this.setState({ ingName: e.target.value }
     );
@@ -569,7 +572,7 @@ export default class IngredientList extends Component {
   render() {
     return (
       <div>
-        <select onChange={e => this.handleChange(e)} name="ingredients">
+        <select onChange={e => this.props.handleChange(e, "name")} name="ingredients">
           {this.state.ingredients.map((e, i) => (
             <option key={i}>{e}</option>
           ))}

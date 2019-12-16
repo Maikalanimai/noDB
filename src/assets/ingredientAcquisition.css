@@ -1,53 +1,66 @@
+.main {
+  background-image: url("./images/bg.png");
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr;
+  height: 100%;
+  padding-bottom: 48px;
+}
+
+hr {
+  height: 80%;
+}
+
 .ingredient_container {
-    color: white;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: flex-start;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
 }
 #ingredient_obj {
-    width: 150px;
-    border: solid rgb(115, 218, 231) 5px;
-    margin: 2%;
-    border-radius: 15%;
-    display: grid;
-    grid-template-rows: 1fr, 1fr, 2fr;
-    grid-row-gap: .5rem;
-    justify-items: center;
+  width: 150px;
+  border: solid rgb(115, 218, 231) 5px;
+  margin: 2%;
+  border-radius: 15%;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 2fr;
+  grid-row-gap: 0.5rem;
+  justify-items: center;
 }
 h3 {
-    font-weight: bolder;
-    margin: 5%;
+  font-weight: bolder;
+  margin: 5%;
 }
 .value {
-    font-size: larger;
-    font-weight: bold;
+  font-size: larger;
+  font-weight: bold;
 }
 .maths {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    font-size: larger;
-    font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  font-size: larger;
+  font-weight: bold;
 }
 .add {
-    border-radius: 50%;
-    width: 1.5rem;
-    margin: 0% 10%;
-    border: 2px black;
+  border-radius: 50%;
+  width: 1.5rem;
+  margin: 0% 10%;
+  border: 2px black;
 }
-.subtract{
-    border-radius: 50%;
-    width: 1.5rem;
-    margin: 0% 10%;
-    border: 2px black;
+.subtract {
+  border-radius: 50%;
+  width: 1.5rem;
+  margin: 0% 10%;
+  border: 2px black;
 }
 .sell {
-    margin-bottom: .5rem;
-    border-radius: 15%;
-    border: black solid 3px;
-    background-color: #55ff4b;
-    font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-radius: 15%;
+  border: black solid 3px;
+  background-color: #55ff4b;
+  font-weight: bold;
 }

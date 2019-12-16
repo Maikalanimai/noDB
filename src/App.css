@@ -17,15 +17,3 @@ Header {
   background-image: url('./assets/images/wynnter-grass_side.png');
   height: 32px;
 }
-.main {
-  background-image: url('./assets/images/bg.png');
-  z-index: -1;
-	display: grid;
-  grid-template-columns: 1fr 1fr 6fr;
-  height: 100%;
-  padding-bottom: 48px;
-}
-
-hr {
-  height: 80%;
-}

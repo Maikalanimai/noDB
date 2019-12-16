@@ -1,26 +1,12 @@
 // *Complete
 import React, { Component } from "react";
-import Axios from "axios";
 import "./header.css";
 
 export default class Header extends Component {
-  constructor() {
-    super();
-    this.state = {
-      valueSold: null
-    };
-  }
 
-  updateValue() {
-    Axios.get("/api/valueSold").then(res =>
-      this.setState({
-        valueSold: res.data[0]
-      })
-    );
-  }
-
+  
   componentDidMount() {
-    this.updateValue();
+    this.props.updateValue();
   }
 
   render() {
@@ -29,7 +15,7 @@ export default class Header extends Component {
         <h1>Wynncraft Ingredient Tracker</h1>
         <h2>
           <div className="sold">Emeralds from selling ingredients:</div>
-          <p>{this.state.valueSold}</p>
+          <p>{this.props.valueSold}</p>
         </h2>
       </header>
     );

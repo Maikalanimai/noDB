@@ -8,7 +8,7 @@ main {
 input {
     height: 2rem;
     width: 12rem;
-    border: skyblue solid 5px;
+    border: green solid 5px;
     display: grid;
     align-items: center;
     margin-left: 10%;
@@ -19,7 +19,8 @@ input {
 .push {
     height: 4rem;
     width: 12rem;
-    border: skyblue solid 7px;
+    border: green solid 7px;
     font-size: 1.2rem;
-    margin-left: 10%
+    margin-left: 10%;
+    border-radius: 20%;
 }

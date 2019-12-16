@@ -1,52 +1,5 @@
 const ingredients = [
-  {
-    id: 0,
-    name: "Pigman flesh",
-    value: 2,
-    quantity: 3
-  },
-  {
-    id: 1,
-    name: "Golden Avia Feather",
-    value: 160,
-    quantity: 24
-  },
-  {
-    id: 2,
-    name: "Pigman flesh",
-    value: 2,
-    quantity: 3
-  },
-  {
-    id: 3,
-    name: "Golden Avia Feather",
-    value: 160,
-    quantity: 24
-  },
-  {
-    id: 4,
-    name: "Pigman flesh",
-    value: 2,
-    quantity: 3
-  },
-  {
-    id: 5,
-    name: "Golden Avia Feather",
-    value: 160,
-    quantity: 24
-  },
-  {
-    id: 6,
-    name: "Pigman flesh",
-    value: 2,
-    quantity: 3
-  },
-  {
-    id: 7,
-    name: "Golden Avia Feather",
-    value: 160,
-    quantity: 24
-  },
+  
 ];
 
 const valueSold = [0];
@@ -70,14 +23,16 @@ module.exports = {
     };
     id++;
     ingredients.push(newIngredient);
-    res.status(201).send({ ingredients, valueSold });
+    res.status(201).send( ingredients);
   },
   changeQuantity: (req, res) => {
     const { add } = req.query;
     const index = ingredients.findIndex(ing => ing.id === +req.params.id);
     add === "true"
       ? ingredients[index].quantity++
-      : ingredients[index].quantity--;
+      : ingredients[index].quantity !== 0 
+      ?ingredients[index].quantity--
+      : console.log('unable to perform action requested. subtract from zero atempted');
     res.status(200).send( ingredients );
   },
   sellIngredient: (req, res) => {
