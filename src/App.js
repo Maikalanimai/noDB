@@ -5,12 +5,7 @@ import Header from "./assets/Header.js"
 import IngredientsAcquired from './assets/IngredientsAcquired'
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      item: []
-    };
-  }
+  
   render() {
     return <div className="App">
       <Header/>

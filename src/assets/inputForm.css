@@ -2,6 +2,7 @@ main {
     display: inline-grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 6fr;
     padding-left: 10px;
+    align-items: center;
 }
 
 input {

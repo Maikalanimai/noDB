@@ -2,11 +2,10 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import "./header.css";
-import IngredientAcquisition from "./IngredientAcquisition";
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       valueSold: null
     };

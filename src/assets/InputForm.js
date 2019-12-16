@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import IngredientList from "./IngredientList";
-import './inputForm.css'
+import "./inputForm.css";
 
 class InputForm extends Component {
   constructor() {
@@ -12,10 +12,12 @@ class InputForm extends Component {
   }
 
   handleChange(e, key) {
-    this.setState({
-      [key]: e.target.value
-    },
-    () => console.log(this.state));
+    this.setState(
+      {
+        [key]: e.target.value
+      },
+      // () => console.log(this.state)
+    );
   }
 
   render() {
@@ -32,8 +34,7 @@ class InputForm extends Component {
           placeholder="Value in emeralds"
           type="number"
         />
-        <button className='push'>Add to My Ingredients</button>
-        
+        <button className="push">Add to My Ingredients</button>
       </main>
     );
   }

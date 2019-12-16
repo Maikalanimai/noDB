@@ -10,7 +10,43 @@ const ingredients = [
     name: "Golden Avia Feather",
     value: 160,
     quantity: 24
-  }
+  },
+  {
+    id: 2,
+    name: "Pigman flesh",
+    value: 2,
+    quantity: 3
+  },
+  {
+    id: 3,
+    name: "Golden Avia Feather",
+    value: 160,
+    quantity: 24
+  },
+  {
+    id: 4,
+    name: "Pigman flesh",
+    value: 2,
+    quantity: 3
+  },
+  {
+    id: 5,
+    name: "Golden Avia Feather",
+    value: 160,
+    quantity: 24
+  },
+  {
+    id: 6,
+    name: "Pigman flesh",
+    value: 2,
+    quantity: 3
+  },
+  {
+    id: 7,
+    name: "Golden Avia Feather",
+    value: 160,
+    quantity: 24
+  },
 ];
 
 const valueSold = [0];
