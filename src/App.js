@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
-import InputForm from './assets/InputForm.js'
-import Header from "./assets/Header.js"
-import IngredientsAcquired from './assets/IngredientsAcquired'
+import IngredientAcquisition from './assets/IngredientAcquisition'
 
 class App extends React.Component {
   
@@ -10,7 +8,7 @@ class App extends React.Component {
     return <div className="App">
       
      
-      <IngredientsAcquired/>
+      <IngredientAcquisition/>
       
     </div>;
   }

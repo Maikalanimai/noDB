@@ -1,6 +1,6 @@
 header {
     display: grid;
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 1fr 6fr 3fr;
     height: 25%;
 }
 
@@ -23,6 +23,7 @@ h2 {
     align-content: center;
     margin-top: 5%;
 }
+
 p {
     border: black solid 5px ;
     height: 2rem;
@@ -31,7 +32,8 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 15%;
-    background-image: url('./images/bg.png');
-    color: white;
+    background-image: url('./images/Andrew.png');
+    background-size: 100%;
+    color: black;
     margin-left: 40% ;
 }

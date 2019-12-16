@@ -12,7 +12,7 @@ hr {
 }
 
 .ingredient_container {
-  color: white;
+  color: orangered;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -29,6 +29,9 @@ hr {
   grid-template-rows: 1fr, 1fr, 2fr;
   grid-row-gap: 0.5rem;
   justify-items: center;
+  background-image: url('./images/Jonathan.png');
+  background-size: 100%;
+
 }
 h3 {
   font-weight: bolder;

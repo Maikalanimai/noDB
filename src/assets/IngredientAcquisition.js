@@ -49,7 +49,9 @@ class IngredientAcquisition extends Component {
           list: res.data
         }),
       this.updateValue()
-    );
+    ).catch(
+      alert('Please check connection to the server')
+    )
   }
 
   push(name, value, quantity) {
@@ -63,7 +65,9 @@ class IngredientAcquisition extends Component {
         this.setState({
           list: res.data
         })
-      );
+      ).catch(
+        alert("Please check connection to the server")
+      )
   }
 
   updateValue() {
@@ -71,7 +75,9 @@ class IngredientAcquisition extends Component {
       this.setState({
         valueSold: res.data[0]
       });
-    });
+    }).catch(
+      alert('Please check connection to the server')
+    );
   }
 
   render() {
